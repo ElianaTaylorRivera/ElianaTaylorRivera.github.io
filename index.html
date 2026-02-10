@@ -5,286 +5,732 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eliana Taylor Rivera | Pre-Law Portfolio</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Great+Vibes&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root {
+      --dark-brown: #2C1B18;
+      --cream: #F5F1ED;
+      --white: #FFFFFF;
     }
+	/* ===== Simple Centered Hero Banner (like your inspo) ===== */
+	.writing-hero {
+	  background: var(--dark-brown);
+  	color: var(--cream);
+	  padding: 90px 20px;
+	  text-align: center;
+}
 
+	.writing-hero .kicker {
+	  font-family: "Great Vibes", cursive;
+	  font-size: 26px;
+	  opacity: 0.85;
+	  margin-bottom: 18px;
+}
+
+	.writing-hero h2 {
+ 	 font-family: "Playfair Display", serif;
+	  font-size: 54px;
+	  line-height: 1.05;
+	  letter-spacing: 1px;
+	  font-weight: 400;
+	  text-transform: uppercase;
+	  max-width: 900px;
+	  margin: 0 auto 18px auto;
+}
+
+	.writing-hero p {
+  	font-family: "Times New Roman", Times, serif;
+ 	 font-size: 16px;
+ 	 line-height: 1.7;
+ 	 opacity: 0.85;
+	  max-width: 720px;
+ 	 margin: 0 auto 26px auto;
+}
+
+	/* button row */
+	.writing-hero .btn-row {
+  	display: flex;
+  	justify-content: center;
+  	gap: 12px;
+  	flex-wrap: wrap;
+	  margin-top: 10px;
+}
+
+	.writing-hero .hero-btn {
+  	display: inline-block;
+  	padding: 12px 18px;
+  	border: 1px solid rgba(245,241,237,0.75);
+  	color: var(--cream);
+  	text-decoration: none;
+  	font-size: 11px;
+  	letter-spacing: 2px;
+	  text-transform: uppercase;
+	  opacity: 0.95;
+}
+
+	.writing-hero .hero-btn:hover {
+	  background: rgba(245,241,237,0.08);
+	  opacity: 1;
+}
+
+	/* mobile sizing */
+	@media (max-width: 900px) {
+	  .writing-hero { padding: 70px 18px; }
+	  .writing-hero h2 { font-size: 38px; }
+	  .writing-hero .kicker { font-size: 22px; }
+}
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: "Playfair Display", serif;
-      background-color: #f6f4ef;
-      color: #2f2f2f;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--cream);
+      color: var(--dark-brown);
       line-height: 1.6;
     }
 
-    /* Header */
+    /* Typography */
+    h1, h2, h3 { font-family: "Playfair Display", serif; font-weight: 400; }
+    .cursive { font-family: "Great Vibes", cursive; }
+    .uppercase { text-transform: uppercase; letter-spacing: 2px; font-size: 12px; }
+
+    /* Header Section */
     header {
-      background-color: #e7e2d9;
-      padding: 40px 20px;
+      background-color: var(--dark-brown);
+      color: var(--cream);
+      padding: 100px 20px;
       text-align: center;
-      border-bottom: 1px solid #d6d1c8;
     }
-
-    header h1 {
-      font-family: "Great Vibes", cursive;
-      font-size: 64px;
-      font-weight: normal;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 18px;
-      color: #555;
-    }
-
-    /* Navigation */
-    nav {
-      background-color: #ffffff;
-      padding: 15px;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
+    nav { margin-bottom: 60px; }
     nav a {
-      margin: 0 15px;
+      color: var(--cream);
       text-decoration: none;
-      color: #3a3a3a;
-      font-weight: 600;
-      transition: color 0.3s;
+      margin: 0 15px;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.8;
     }
 
-    nav a:hover {
-      color: #8a7d6a;
+    .hero-name {
+      font-family: "Great Vibes", cursive;
+      font-size: 95px;
+      line-height: 0.8;
+      margin-bottom: 20px;
+      color: var(--cream);
+    }
+    .hero-tagline {
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      display: block;
+      font-weight: 300;
+    }
+    .hero-sub-detail {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-top: 30px;
+      opacity: 0.5;
+      border-top: 1px solid rgba(245, 241, 237, 0.2);
+      display: inline-block;
+      padding-top: 15px;
     }
 
-    /* Main Layout */
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
+    /* About Section */
+    .stat-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 10%;
+      gap: 50px;
     }
-
-    section {
-      margin-bottom: 70px;
+    .stat-img-container { flex: 0 0 280px; }
+    .stat-img {
+      width: 100%;
+      height: auto;
+      border: 8px solid var(--dark-brown);
+      object-fit: cover;
     }
-
-    section h2 {
+    .stat-content { flex: 1; }
+    .stat-content h2 {
       font-size: 32px;
       margin-bottom: 20px;
-      border-bottom: 2px solid #d6d1c8;
-      padding-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--dark-brown);
     }
 
-    /* Cards */
-    .card-grid {
+    /* Times New Roman Font for Bio */
+    .stat-content p {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 19px;
+      line-height: 1.7;
+      color: #1a1a1a;
+      text-align: justify;
+    }
+
+    /* Professional Experience */
+    .experience-section {
+      background-color: var(--dark-brown);
+      color: var(--cream);
+      padding: 100px 10%;
+    }
+    .section-header { text-align: center; margin-bottom: 60px; }
+    .section-header h2 { font-size: 45px; }
+    .exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    .exp-card {
+      border-left: 1px solid rgba(245, 241, 237, 0.2);
+      padding-left: 25px;
+      margin-bottom: 30px;
+    }
+    .exp-card h3 { font-size: 22px; color: var(--white); }
+    .exp-card .date {
+      font-size: 12px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      display: block;
+      opacity: 0.7;
+    }
+    .exp-card ul { list-style: none; font-size: 14px; opacity: 0.9; }
+    .exp-card li::before { content: "— "; color: #8a7d6a; }
+
+    /* Education & Skills Section Styling */
+    .info-grid-section {
+      padding: 100px 10%;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      background-color: var(--dark-brown);
+      color: var(--cream);
+    }
+    .info-group h2 {
+      font-size: 32px;
+      border-bottom: 2px solid rgba(245,241,237,0.6);
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+      color: var(--cream);
+      text-transform: uppercase;
     }
 
-    .card {
-      background-color: #ffffff;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s;
+    /* Education text color fix */
+    #education .exp-card h3 {
+      color: var(--cream) !important;
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+    #education .exp-card p {
+      color: var(--cream);
+      font-size: 16px;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      color: #4a4a4a;
-    }
-
-    /* Resume Button */
-    .btn {
+    .tag {
+      background: white;
+      padding: 5px 15px;
+      font-size: 12px;
+      border-radius: 20px;
+      border: 1px solid #ddd;
       display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background-color: #8a7d6a;
-      color: #ffffff;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background-color 0.3s;
+      margin: 0 5px 10px 0;
+      color: var(--dark-brown);
     }
 
-    .btn:hover {
-      background-color: #6f6352;
+    /* Projects Section */
+    .projects-section {
+      padding: 100px 10%;
+      text-align: center;
+      background: var(--cream);
+      color: var(--dark-brown);
+    }
+    .projects-section .section-header { margin-bottom: 50px; }
+    .projects-section .section-header h2 { font-size: 45px; color: var(--dark-brown); }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 35px;
+    }
+    .project-card {
+      background: rgba(245,241,237,0.95);
+      border: 1px solid rgba(44,27,24,0.15);
+      padding: 25px;
+      border-radius: 6px;
+      text-align: left;
+      min-height: 170px;
+    }
+    .project-icon {
+      width: 38px;
+      height: 38px;
+      border: 1px solid rgba(44,27,24,0.25);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      color: var(--dark-brown);
+      font-family: "Playfair Display", serif;
+      font-size: 16px;
+    }
+    .project-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: var(--dark-brown);
+    }
+    .project-card p {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--dark-brown);
+    }
+    .project-card ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 10px;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--dark-brown);
+    }
+    .project-card ul li { margin-bottom: 6px; }
+    .project-card ul li::before {
+      content: "✦ ";
+      color: var(--dark-brown);
+      font-size: 14px;
+      line-height: 1.4;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 900px){
+      .projects-grid{ grid-template-columns: 1fr; }
+    }
+
+    /* Writing Samples (Magazine Grid) */
+    .writing-section{
+      padding: 100px 10%;
+      background: #fff;
+    }
+    .writing-header{
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .writing-header h2{
+      font-size: 45px;
+      color: var(--dark-brown);
+    }
+    .writing-grid{
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+    .writing-feature{
+      display: grid;
+      grid-template-rows: 320px auto;
+      border: 1px solid rgba(44,27,24,0.18);
+      background: var(--cream);
+      position: relative;
+    }
+    .writing-side{
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .writing-card{
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      border: 1px solid rgba(44,27,24,0.18);
+      background: var(--cream);
+      min-height: 155px;
+      position: relative;
+    }
+    .writing-img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* optional: lock the feature image height for consistency */
+    .writing-feature .writing-img{
+      height: 320px;
+    }
+    @media (max-width: 900px){
+      .writing-feature .writing-img{
+        height: 240px;
+      }
+    }
+
+    .writing-content{
+      padding: 18px 18px 16px 18px;
+    }
+    .writing-kicker{
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-bottom: 8px;
+    }
+    .writing-title{
+      font-family: "Playfair Display", serif;
+      font-size: 26px;
+      line-height: 1.15;
+      margin-bottom: 10px;
+      color: var(--dark-brown);
+    }
+    .writing-feature .writing-title{ font-size: 34px; }
+    .writing-desc{
+      font-family: "Times New Roman", Times, serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #1a1a1a;
+      margin-bottom: 14px;
+    }
+    .sample-btn{
+      display: inline-block;
+      padding: 10px 16px;
+      border: 1px solid var(--dark-brown);
+      color: var(--dark-brown);
+      text-decoration: none;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+    .sample-btn:hover{ opacity: 1; }
+
+    /* ✅ Multiple buttons inside one card */
+    .sample-links{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .sample-links .sample-btn{
+      margin-top: 0;
+      white-space: nowrap;
+    }
+
+    /* ✅ OPTION 4: Hover effect (expensive/clean) */
+    .writing-feature, .writing-card{
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .writing-feature:hover, .writing-card:hover{
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px rgba(44,27,24,0.12);
+    }
+
+    @media (max-width: 900px){
+      .writing-grid{ grid-template-columns: 1fr; }
+      .writing-feature{ grid-template-rows: 240px auto; }
+      .writing-card{ grid-template-columns: 120px 1fr; }
+      .hero-name { font-size: 60px; }
+      .stat-section { flex-direction: column; }
+      .exp-grid, .info-grid-section { grid-template-columns: 1fr; }
+      .stat-img-container { flex: 0 0 200px; }
     }
 
     /* Footer */
     footer {
-      background-color: #e7e2d9;
+      background: var(--dark-brown);
+      color: var(--cream);
+      padding: 80px 20px;
       text-align: center;
-      padding: 25px 15px;
-      border-top: 1px solid #d6d1c8;
-      font-size: 14px;
-      color: #555;
     }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 48px;
-      }
-
-      nav a {
-        display: block;
-        margin: 8px 0;
-      }
+    .btn-resume {
+      display: inline-block;
+      padding: 15px 35px;
+      border: 1px solid var(--cream);
+      color: var(--cream);
+      text-decoration: none;
+      margin-top: 30px;
     }
+/* ============================
+   FORCE CENTERING FOR WRITING BOX
+   (does NOT remove existing layout)
+   ============================ */
+
+/* Center the Case Brief container itself */
+.writing-feature {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Center everything inside the box */
+.writing-feature .writing-content {
+  text-align: center;
+}
+
+/* Ensure buttons stay centered even if wrapping */
+.writing-feature .sample-links {
+  justify-content: center;
+}
+
   </style>
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1>Eliana Taylor Rivera</h1>
-    <p>Pre-Law Graduate | Paralegal Certificate | Aspiring Attorney</p>
-  </header>
-
-  <!-- Navigation -->
+<header>
   <nav>
     <a href="#about">About</a>
-    <a href="#education">Education</a>
     <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
+    <a href="#projects">Involvement & Projects</a>
+    <a href="#education">Education</a>
+    <a href="#writing">Writing Samples</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Main Content -->
-  <div class="container">
+  <h1 class="hero-name">Eliana Taylor Rivera</h1>
+  <span class="hero-tagline">Pre-Law Portfolio</span>
+  <p class="hero-sub-detail">Aspiring Attorney • Quinnipiac University • Class of 2026</p>
+</header>
 
-    <!-- About -->
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        Hi, I’m Eliana! I’m a soon-to-be Quinnipiac University graduate (May 2026) studying Law in Society, with a real passion for legal research, advocacy, and making a difference through public service. Alongside my studies, I’m completing my paralegal certificate so I’m ready to dive into the fast-paced world of law. I love turning complex case law into clear insights, navigating Westlaw like a pro, and crafting legal writing that actually makes sense. Detail-oriented, resourceful, and discreet, I thrive in environments where every document and deadline counts. I’m looking for a full-time paralegal role where I can bring my curiosity, energy, and analytical mindset to a team that values sharp thinking and collaboration. I’m excited to contribute, learn, and make an impact from day one!
-      </p>
-    </section>
+<section id="about" class="stat-section">
+  <div class="stat-img-container">
+    <img src="IMG_1263.JPG" alt="Eliana Rivera" class="stat-img">
+  </div>
+  <div class="stat-content">
+    <h2>About Eliana</h2>
+    <p>
+      Hi, I’m Eliana! I’m a soon-to-be Quinnipiac University graduate (May 2026) studying Law in Society,
+      with a real passion for legal research, advocacy, and making a difference through public service.
+      Alongside my studies, I’m completing my paralegal certificate & Philosophy Minor, so I’m ready to dive into the
+      fast-paced world of law. I love turning complex case law into clear insights, navigating Westlaw
+      like a pro, and crafting legal writing that actually makes sense. Detail-oriented, resourceful,
+      and discreet, I thrive in environments where every document and deadline counts. I’m looking for
+      a full-time paralegal role where I can bring my curiosity, energy, and analytical mindset to a
+      team that values sharp thinking and collaboration. I’m excited to contribute, learn, and make an impact from day one!
+    </p>
+  </div>
+</section>
 
-    <!-- Education -->
-    <section id="education">
-      <h2>Education</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>B.A. in Law & Society</h3>
-          <p><strong>University:</strong> Quinnipiac University </p>
-          <p><strong>Year:</strong> 2026</p>
-        </div>
-
-        <div class="card">
-          <h3>High School</h3>
-          <p><strong>Institution:</strong> New Fairfield High School</p>
-          <p><strong>Status:</strong> Graduate of 2022</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience">
-      <h2>Professional Experience</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>Legal Intern</h3>
-          <p><strong>Organization:</strong> Law Offices of John J. Carangelo LLC </p>
-          <p>
-            <p><strong>Duration:</strong> January 2025 - Current
-          <p>
-	<li>Developed strong legal research and analytical skills through extensive case law and statute review.</li>
-	<li>Enhanced time-management and organizational skills in a fast-paced legal environment..</li>
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Legal Intern</h3>
-          <p><strong>Organization:</strong> Consumer Legal Services LLC</p>
-          <p><strong>Duration:</strong> January 2025 - Current
-	<ul>
-            <li>Coordinated and maintained sensitive case files, ensuring secure handling of confidential information at all times.</li>
-	<li>Analyzed statutes, case law, and legal precedents to assist in case strategy development, contributing to timely and accurate filings.</li>
-   
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Resident Assistant</h3>
-          <p><strong>Organization:</strong> Quinnipiac University Residential Life </p>
-          <p>
-            <p><strong>Duration:</strong> August 2024 - Current
-	<ul>
-            <li>Responded to and documented student concerns and incidents with professionalism, discretion, and confidentiality.</li>
-	<li>Strengthened crisis management and decision-making abilities in high-pressure situations.</li>
-		<li>Maintained strict confidentiality when handling sensitive student information.</li>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills">
-      <h2>Skills & Competencies</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>Legal Skills</h3>
-          <ul>
-            <li>Legal Research</li>
-            <li>Case Analysis</li>
-            <li>Document Drafting</li>
-            <li>Citation (Bluebook/APA)</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Professional Skills</h3>
-          <ul>
-            <li>Client Communication</li>
-            <li>Time Management</li>
-            <li>Conflict Resolution</li>
-            <li>Organization</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Technical Skills</h3>
-          <ul>
-            <li>Microsoft Office</li>
-            <li>Google Workspace</li>
-            <li>Canva</li>
-            <li>Basic HTML/CSS</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p><strong>Email:</strong> elianatrivera@outlook.com</p>
-      <p><strong>Phone:</strong> (203)604-5528 </p>
-      <p><strong>LinkedIn:</strong> linkedin.com/in/yourname</p>
-
-      <a href="#" class="btn">Download Resume (PDF)</a>
-    </section>
-
+<section id="experience" class="experience-section">
+  <div class="section-header">
+    <h2>PROFESSIONAL <span class="cursive" style="color:#F5F1ED">experience</span></h2>
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 Eliana Taylor Rivera | Professional Portfolio</p>
-  </footer>
+  <div class="exp-grid">
+    <div class="exp-card">
+      <span class="date">2025 – Present</span>
+      <h3>Law Offices of John J. Carangelo LLC</h3>
+      <p class="uppercase" style="margin-bottom:10px">Legal Intern</p>
+      <ul>
+        <li>Developed strong legal research and analytical skills through extensive case law and statute review.</li>
+        <li>Enhanced time-management and organizational skills in a fast-paced legal environment.</li>
+        <li>Managed and organized confidential client files and legal records, ensuring 100% compliance with privacy and ethical standards.</li>
+      </ul>
+    </div>
+
+    <div class="exp-card">
+      <span class="date">2025 – Present</span>
+      <h3>Consumer Legal Services LLC</h3>
+      <p class="uppercase" style="margin-bottom:10px">Legal Intern</p>
+      <ul>
+        <li>Coordinated and maintained sensitive case files, ensuring secure handling of confidential information at all times.</li>
+        <li>Analyzed statutes, case law, and legal precedents to assist in case strategy development, contributing to timely and accurate filings.</li>
+        <li>Conducted legal research for 20+ cases, contributing to accurate filings and improved case preparation efficiency.</li>
+      </ul>
+    </div>
+
+    <div class="exp-card">
+      <span class="date">2024 – Present</span>
+      <h3>Quinnipiac University</h3>
+      <p class="uppercase" style="margin-bottom:10px">Resident Assistant</p>
+      <ul>
+        <li>Responded to and documented student concerns and incidents with professionalism, discretion, and confidentiality.</li>
+        <li>Strengthened crisis management and decision-making abilities in high-pressure situations.</li>
+        <li>Maintained strict confidentiality when handling sensitive student information.</li>
+      </ul>
+    </div>
+
+    <div class="exp-card">
+      <span class="date">2021 – 2025</span>
+      <h3>Greater Connecticut Oral and Dental Implant Surgery</h3>
+      <p class="uppercase" style="margin-bottom:10px">Oral Surgeon Assistant</p>
+      <ul>
+        <li>Managed and maintained 100+ confidential patient records, ensuring accuracy and adherence to privacy regulations.</li>
+        <li>Developed strong attention to detail, document management, and ethical compliance skills.</li>
+        <li>Guided patients through post-procedure instructions, improving understanding and compliance while developing professional communication skills.</li>
+      </ul>
+    </div>
+
+    <div class="exp-card">
+      <span class="date">2023 – 2024</span>
+      <h3>Rockland Boces</h3>
+      <p class="uppercase" style="margin-bottom:10px">Special Education Teacher Assistant</p>
+      <ul>
+        <li>Assisted in planning and executing classroom activities while maintaining a safe, structured, and patient-focused learning environment.</li>
+        <li>Provided patient, individualized classroom support for 10+ students with diverse learning needs, improving engagement and ensuring a structured environment.</li>
+        <li>Gained experience in time management, multitasking, and critical thinking, relevant for high-pressure professional settings.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Projects & Involvement BEFORE Education/Skills -->
+<section id="projects" class="projects-section">
+  <div class="section-header">
+    <h2> INVOLVEMENT & <span class="cursive"> projects</span></h2>
+  </div>
+
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-icon">✦</div>
+      <h3>Neurowaves Project</h3>
+      <div class="project-meta uppercase">Founder & President</div>
+      <p>
+        Founded and lead a student-run initiative raising awareness and funds for epilepsy research.
+        Manage a 15-member volunteer team, coordinate partnerships, and organize large-scale fundraising
+        events supporting CURE.
+      </p>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">✦</div>
+      <h3>Quinnipiac Student Philanthropy Council</h3>
+      <div class="project-meta uppercase">Founder & President</div>
+      <p>
+        Established the university’s inaugural Student Philanthropy Council, defining its mission,
+        structure, and long-term goals while leading campus-wide initiatives promoting donor education
+        and community engagement.
+      </p>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">✦</div>
+      <h3>Quinnipiac Panhellenic Executive Board</h3>
+      <div class="project-meta uppercase">Executive Vice President</div>
+      <p>
+        Serve on the Executive Board overseeing governance, communications, and elections. Maintain
+        organizational bylaws and coordinate election processes through applicant interviews and
+        information sessions.
+      </p>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">✦</div>
+      <h3>Quinnipiac Mock Trial Team</h3>
+      <div class="project-meta uppercase">Member</div>
+      <p>
+        Participate in simulated trial proceedings involving case analysis, argument development,
+        and oral advocacy, strengthening legal reasoning and public speaking skills.
+      </p>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">✦</div>
+      <h3>Quinnipiac University Involvement</h3>
+      <div class="project-meta uppercase">Clubs & Organizations</div>
+      <ul>
+        <li>Pre-Law Society</li>
+        <li>Biomedical Sciences Club</li>
+        <li>Alpha Delta Pi Sorority (ADPi)</li>
+        <li>On-campus student employee</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">✦</div>
+      <h3>Iona University Involvement</h3>
+      <div class="project-meta uppercase">Clubs & Organizations</div>
+      <ul>
+        <li>Division I Water Polo Team Manager</li>
+        <li>Social Media Manager</li>
+        <li>Iona Singers</li>
+        <li>Member of Club Dance</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="info-grid-section">
+  <div id="education" class="info-group">
+    <h2>EDUCATION</h2>
+
+    <div class="exp-card" style="color: inherit; border-left: 1px solid rgba(245,241,237,0.6);">
+      <span class="date">Graduating May 2026</span>
+      <h3>Quinnipiac University</h3>
+      <p>B.A. in Law & Society</p>
+    </div>
+
+    <div class="exp-card" style="color: inherit; border-left: 1px solid rgba(245,241,237,0.6);">
+      <span class="date">Transferred In 2023</span>
+      <h3>Iona University</h3>
+    </div>
+
+    <div class="exp-card" style="color: inherit; border-left: 1px solid rgba(245,241,237,0.6);">
+      <span class="date">Graduated 2022</span>
+      <h3>New Fairfield High School</h3>
+      <p>High School Diploma</p>
+    </div>
+  </div>
+
+  <div id="skills" class="info-group">
+    <h2>SKILLS</h2>
+    <div style="margin-bottom:20px">
+      <h4 class="uppercase">Legal</h4>
+      <span class="tag">Legal Research</span>
+      <span class="tag">Legal Writing & Editing</span>
+      <span class="tag">Attention to Detail & Citation Accuracy</span>
+      <span class="tag">Bluebook / APA</span>
+      <span class="tag">Administrative Support in Legal Settings</span>
+      <span class="tag">Advocacy & Oral Argument</span>
+    </div>
+    <div>
+      <h4 class="uppercase">Technical</h4>
+      <span class="tag">Microsoft Office</span>
+      <span class="tag">Google Workspace</span>
+      <span class="tag">Canva</span>
+      <span class="tag">HTML/CSS</span>
+      <span class="tag">Westlaw</span>
+      <span class="tag">Task & Deadline Tracking</span>
+      <span class="tag">LexisNexis</span>
+      <span class="tag">Document Formatting & Proofreading</span>
+    </div>
+  </div>
+</section>
+
+<section id="writing" class="writing-section">
+  <div class="writing-header">
+    <h2>WRITING <span class="cursive">samples</span></h2>
+  </div>
+
+    <!-- CENTER: BIG FEATURE -->
+    <div class="writing-feature">
+      <div class="writing-content">
+        <div class="writing-kicker">LEGAL WRITING</div>
+        <div class="writing-title">Case Brief Portfolio</div>
+        <div class="writing-desc">
+          A selection of case briefs demonstrating issue spotting, rule synthesis, and clear legal writing.
+        </div>
+
+        <div class="sample-links">
+          <a class="sample-btn" href="Eliana%20T.%20Rivera%20%E2%80%94%C2%A0Case%20Brief.%20Giles%20v.%20Commonwealth.pdf" target="_blank">Brief 01</a>
+          <a class="sample-btn" href="Eliana%20T.%20Rivera%20%E2%80%94%C2%A0Case%20Brief.%20Johns%20v.%20Johns%20v.%20Commonwealth.pdf" target="_blank">Brief 02</a>
+          <a class="sample-btn" href="Eliana%20T.%20Rivera%20%E2%80%94%20Case%20Brief.%20In%20the%20Matter%20of%20the%20Estate%20of%20Killen.pdf" target="_blank">Brief 03</a>
+          <a class="sample-btn" href="Eliana%20T.%20Rivera%20%E2%80%94%20Case%20Brief.%20Stanton%20v.%20Grigley.pdf" target="_blank">Brief 04</a>
+          <a class="sample-btn" href="Eliana%20T.%20Rivera%20%E2%80%94%20Case%20Brief.%20In%20re%20Estate%20of%20Reno.pdf" target="_blank">Brief 05</a>
+          <a class="sample-btn" href="Eliana%20T.%20Rivera%20%E2%80%94%20Case%20Brief.%20In%20re%20Estate%20of%20Bussler.pdf" target="_blank">Brief 06</a>
+        </div>
+
+      </div>
+    </div>
+
+
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <h2 class="cursive" style="font-size: 45px; margin-bottom:20px">Get in touch</h2>
+  <p>elianatrivera@outlook.com • (203) 604-5528 • www.linkedin.com/in/eliana-rivera1</p>
+  <a href="Eliana%20Rivera%20-%20Resume%20.pdf" class="btn-resume uppercase" target="_blank">
+  View Official Resume
+</a>
+  <p style="margin-top: 50px; opacity: 0.4; font-size: 10px;">© 2026 ELIANA TAYLOR RIVERA</p>
+</footer>
 
 </body>
 </html>
